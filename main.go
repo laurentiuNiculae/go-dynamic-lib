@@ -9,5 +9,4 @@ func main() {
 	})
 
 	pm.LoadPlugins("/plugins")
-
 }
