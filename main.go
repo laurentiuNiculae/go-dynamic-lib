@@ -1,6 +1,8 @@
 package main
 
-import "github.com/laurentiuNiculae/go-dynamic-lib/extensions"
+import (
+	"github.com/laurentiuNiculae/go-dynamic-lib/extensions"
+)
 
 func main() {
 	pm := extensions.NewPluginManager(extensions.Config{
@@ -9,4 +11,8 @@ func main() {
 	})
 
 	pm.LoadPlugins("/plugins")
+
+	for _, p := range extensions.GetPrinters() {
+		p.Print("Wow")
+	}
 }
